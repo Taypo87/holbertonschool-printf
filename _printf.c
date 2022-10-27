@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
-
+#include <stdlib.h>
 /**
  * _printf - prints a string of any type and varying size
  * @format: pointer to the string to be printed
@@ -10,15 +10,16 @@
 
 int _printf(const char *format, ...)
 {
-	char *str, s;
+	const char *str;
 	unsigned int i;
+	char *s;
 
 	va_list arg;
 	va_start(arg, format);
 
 	for (str = format; *str != '\0'; str ++)
 	{
-		while (*str != %)
+		while (*str != '%')
 		{
 			putchar(*str);
 			str++;
@@ -37,4 +38,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(arg);
+	return (0);
 }
