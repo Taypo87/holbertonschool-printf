@@ -10,33 +10,26 @@
 
 int _printf(const char *format, ...)
 {
-	const char *str;
-	unsigned int i;
-	char *s;
-
+	unsigned int i = 0;
 	va_list arg;
+
 	va_start(arg, format);
 
-	for (str = format; *str != '\0'; str ++)
+	while (format[i] != '\0')
 	{
-		while (*str != '%')
+		while (format[i] != '%')
 		{
-			putchar(*str);
-			str++;
+			putchar(format[i]);
+			i++;
 		}
 
-		str++;
-		switch(*str)
-		{
-		case 'c' : i = va_arg(arg, int);
-			putchar (i);
-			break;
+		i++;
+		putchar (get_p_func(*(format + i), arg));
 
-		case 's' : s = va_arg(arg, char *);
-			puts(s);
-			break;
-		}
+		if (format[i + 1] == '\0')
+
+			return(0);
 	}
 	va_end(arg);
-	return (0);
+	return(0);
 }
