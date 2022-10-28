@@ -17,18 +17,14 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		while (format[i] != '%')
-		{
+		if (format[i] != '%')
 			putchar(format[i]);
+		if (format[i] == '%')
+		{
 			i++;
+			get_p_func(format[i], arg);
 		}
-
 		i++;
-		putchar (get_p_func(*(format + i), arg));
-
-		if (format[i + 1] == '\0')
-
-			return(0);
 	}
 	va_end(arg);
 	return(0);
