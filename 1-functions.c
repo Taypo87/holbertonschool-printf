@@ -29,5 +29,5 @@ int p_string(va_list arg)
 		putchar(s[i]);
 		i++;
 	}
-	return (i);
+	return (i - 1);
 }
