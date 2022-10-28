@@ -1,8 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * we want food
+ * get_p_func - selects proper function to handle arg type for _printf
+ * @b: pointer to char in struct p_func
+ * @arg: arguments
+ * Return: 0 if succeessful
  */
+
 int get_p_func(const char b, va_list arg)
 {
 	int i = 0;
