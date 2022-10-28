@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, count = 0;
 	va_list arg;
 
 	va_start(arg, format);
@@ -22,10 +22,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			get_p_func(format[i], arg);
+			count += get_p_func(format[i], arg);
 		}
 		i++;
+		count++;
 	}
 	va_end(arg);
-	return (i);
+	return (count);
 }
