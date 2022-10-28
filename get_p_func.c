@@ -1,5 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+ * we want food
+ */
 int get_p_func(const char b, va_list arg)
 {
 	int i = 0;
