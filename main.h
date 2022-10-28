@@ -17,6 +17,7 @@ typedef struct p_func
 	int (*f)(va_list ptr);
 } p_func;
 
+int p_string(va_list arg);
 int _printf(const char *format, ...);
 int get_p_func(const char c, va_list arg);
 char *convert(unsigned int num, int base);

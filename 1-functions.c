@@ -12,3 +12,15 @@ int p_char(va_list arg)
 	return (1);
 }
 
+int p_string(va_list arg)
+{
+	int i = 0;
+	char *s = va_arg(arg, char *);
+
+	while (s[i] != '\0')
+	{
+		putchar(s[i]);
+		i++;
+	}
+	return (0);
+}
