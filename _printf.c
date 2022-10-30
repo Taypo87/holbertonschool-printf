@@ -32,6 +32,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(arg);
-	printf("%i", count);
 	return (count);
 }
