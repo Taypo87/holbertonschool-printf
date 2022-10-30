@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  * p_char - prints a given character
  * @arg: the char to be printed
@@ -30,4 +30,19 @@ int p_string(va_list arg)
 		i++;
 	}
 	return (i - 1);
+}
+
+/**
+ * p_perc - prints percent
+ * @arg: argument
+ * Return: 1
+ */
+
+int p_perc(va_list arg)
+{
+	if (arg != NULL)
+
+		putchar('%');
+
+	return (1);
 }

@@ -22,5 +22,7 @@ int _printf(const char *format, ...);
 int get_p_func(const char c, va_list arg);
 char *convert(unsigned int num, int base);
 int p_char(va_list arg);
+int p_perc(va_list arg);
+int p_int(va_list arg);
 
 #endif
