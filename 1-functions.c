@@ -29,7 +29,7 @@ int p_string(va_list arg)
 		putchar(s[i]);
 		i++;
 	}
-	return (i - 1);
+	return (i);
 }
 
 /**

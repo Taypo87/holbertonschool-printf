@@ -18,7 +18,10 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
+		{
 			putchar(format[i]);
+			count++;
+		}
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
@@ -27,8 +30,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] == '\0')
 			return (count);
 		i++;
-		count++;
 	}
 	va_end(arg);
+	printf("%i", count);
 	return (count);
 }

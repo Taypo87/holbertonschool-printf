@@ -1,0 +1,9 @@
+#include "main.h"
+
+int get_p_func(const char c, va_list arg)
+{
+	int i = 0;
+
+	p_func func[] = {
+		{'c', print_char};
+	}
