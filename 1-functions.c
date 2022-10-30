@@ -23,7 +23,7 @@ int p_string(va_list arg)
 	char *s = va_arg(arg, char *);
 
 	if (s == NULL)
-		return (0);
+		s = "(null)";
 	while (s[i] != '\0')
 	{
 		putchar(s[i]);
