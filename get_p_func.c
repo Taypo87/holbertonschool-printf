@@ -16,7 +16,8 @@ int get_p_func(const char b, va_list arg)
 		{'s', p_string},
 		{'c', p_char},
 		{'%', p_perc},
-		{'i', p_int}};
+		{'i', p_int},
+		{'d', p_int}};
 
 	while (func[i].t != 0)
 	{
