@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
+ * p_int - prints an int of variable length
+ * @arg: argument to be printed
+ * Return: number of characters
  */
 
 
