@@ -1,0 +1,35 @@
+.TH _printf
+.SH NAME
+_printf \- prints input to std output
+.SH SYNOPSIS
+.B _printf format
+\fb FORMAT\fr
+[\fb ARGUMENT\fr]...
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT
+_printf writes the output under the control of a FORMAT string that specifies
+how subsequent arguments are converted.
+.SS \fb Format of the format string\fr
+The format string is composed of zero or more directives: Ordinary characters
+(excluding '%')which are copied unchanged to the output string; and conversion
+specifications. Conversions specs are introduced by the character '%' and end
+with a \fbconversion specifier \fr
+.SS Conversion Specifiers
+.TP
+[\fbd, i]
+The int argument is converted to decimal notation and is written
+to standard output
+.TP
+[\fbc]
+The int argument is converted to a character and the character is written
+to standard output
+.TP
+[\fbs]
+The const char pointer argument is expected to be a pointer an array of
+characters and is written to standard output
+.TP
+[\fb%]
+The '%' character is written to standard output
+.SH RETURN VALUE
+Returns number of characters written to standard output on succeess
+Returns negative value for error
